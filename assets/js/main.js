@@ -17,7 +17,7 @@ console.log (userAge);
 // calcola il prezzo del viaggio sapendo che
 // prezzo biglietto 0.21 €/km
 
-const ticketPrice = ((travelLenght) * 0.21);
+const ticketPrice = travelLenght * 0.21;
 // --------------------------------perché va solo con le parentesi?
 console.log (ticketPrice);
 
@@ -27,16 +27,20 @@ console.log (ticketPrice);
 if (userAge <= 18) {
    const youngPrice = ticketPrice - (ticketPrice / 100 * 20);
 
-//    document.getElementById(answear).innerHTML = `il tuo prezzo giovani é ${youngPrice}`;
+   document.getElementById("answear").innerHTML = `il tuo prezzo giovani é ${youngPrice}`;
 
    alert(`il tuo prezzo giovani é ${youngPrice} `);
+
+   console.log(youngPrice)
 
 }else if (userAge >= 65){
     const elderPrice = ticketPrice - (ticketPrice /100 * 40);
 
-    //    document.getElementById(answear).innerHTML = `il tuo prezzo giovani é ${elderPrice}`;
+       document.getElementById("answear").innerHTML = `il tuo prezzo giovani é ${elderPrice}`;
 
     alert (`il tuo prezzo anziani é ${elderPrice}`);
+
+    console.log(youngPrice)
 }
 // --------------------------perché non va il console.log dentro gli if ?
 // e perché non va document?
