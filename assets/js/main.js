@@ -17,34 +17,33 @@ console.log (userAge);
 // calcola il prezzo del viaggio sapendo che
 // prezzo biglietto 0.21 €/km
 
-const ticketPrice = travelLenght * 0.21;
-// --------------------------------perché va solo con le parentesi?
+const ticketPrice = (travelLenght * 0.21).toFixed(2)
+// tofixed(2) arrotonda al secondo decimale
+
 console.log (ticketPrice);
 
 // SE <18 sconto 20%
 // SE >65 sconto 40%
 
 if (userAge <= 18) {
-   const youngPrice = ticketPrice - (ticketPrice / 100 * 20);
+   const youngPrice = (ticketPrice - (ticketPrice / 100 * 20)).toFixed(2) ;
+// tofixed(2) arrotonda al secondo decimale
 
-   document.getElementById("answear").innerHTML = `il tuo prezzo giovani é ${youngPrice}`;
+   document.getElementById("answear").innerHTML = `Il tuo prezzo giovani é ${youngPrice}€`;
 
-   alert(`il tuo prezzo giovani é ${youngPrice} `);
-
-   console.log(youngPrice)
+   console.log(youngPrice);
 
 }else if (userAge >= 65){
-    const elderPrice = ticketPrice - (ticketPrice /100 * 40);
+    const elderPrice = (ticketPrice - (ticketPrice /100 * 40)).toFixed(2);
+// tofixed(2) arrotonda al secondo decimale
 
-       document.getElementById("answear").innerHTML = `il tuo prezzo giovani é ${elderPrice}`;
+    document.getElementById("answear").innerHTML = `Il tuo prezzo anziani é ${elderPrice}€`;
 
-    alert (`il tuo prezzo anziani é ${elderPrice}`);
-
-    console.log(youngPrice)
+    console.log(elderPrice);
 }
-// --------------------------perché non va il console.log dentro gli if ?
-// e perché non va document?
+
 else {
-    alert (`il tuo prezzo normale é ${ticketPrice}`);
+    document.getElementById("answear").innerHTML = `Il tuo prezzo normale é ${ticketPrice}€`;
 }
 
+// output con due soli decimali usando to fixed(2) sopra.
